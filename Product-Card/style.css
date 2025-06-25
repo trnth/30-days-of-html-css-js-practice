@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    --primary-color: #4CAF50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to right, #4CAF50, #3d8880);
+    font-family: "Montserrat", sans-serif;
+}
+
+.card {
+    width: 320px;
+    height: 400px;
+    display: block;
+    margin: 100px auto;
+    background-color: #272d40;
+    border: 0 solid;
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    position: relative;
+}
+
+.card_heart,
+.card_cart {
+    font-size: 25px;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.card_cart {
+    left: unset;
+    right: 20px;
+}
+
+.card_image {
+    width: 90%;
+    transition: 0.5s;
+}
+
+.card_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.card_title,
+.card_price {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.card_title {
+    color: var(--primary-color);
+}
+
+.card_size {
+    margin-top: 150px;
+}
+
+.card_size,
+.card_color {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.card_size span {
+    background-color: #dadada;
+    padding: 5px 10px;
+    margin: 0px 5px;
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card_color span {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 1px 5px;
+    cursor: pointer;
+}
+
+.card_color-green {
+    background-color: green;
+}
+
+.card_color-red {
+    background-color: red;
+}
+
+.card_color-black {
+    background-color: black;
+}
+
+.card_action {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.card_action button {
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.card:hover .card_image {
+    transform: translateY(-90px) rotate(-20deg);
+}
+
+.card:hover .card_title {
+    transform: translate(-37px, -70px);
+}
+
+.card:hover .card_price {
+    transform: translate(-120px, -70px);
+}
+
+.card:hover .card_size,
+.card:hover .card_color,
+.card:hover .card_action {
+    visibility: visible;
+    opacity: 100;
+    transition: 0.5s;
+    transition-delay: 0.2s;
+}
+
+.card:hover .card_size {
+    margin-top: -20px;
+}
+
+.card_action button:hover {
+    transform: scale(0.9);
+}
